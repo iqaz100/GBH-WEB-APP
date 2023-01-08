@@ -44,7 +44,7 @@ class Product(models.Model):
     discount = models.ForeignKey(Discount, null=True, on_delete=models.SET_NULL)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
-    category = models.ForeignKey(Category, null=False, on_delete=models.CASCADE)  # TODO: Do zmiany on_delete
+    category = models.ForeignKey(Category, null=False, on_delete=models.CASCADE)  # TODO: moze  DEFAULT
 
     def __str__(self):
         return self.name
