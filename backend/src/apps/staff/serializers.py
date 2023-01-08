@@ -24,4 +24,3 @@ class RoleSerializer(serializers.ModelSerializer):
             "can_add_products",
             "can_modify_products"
         )
-        read_only_fields = ()  # PUSTE ?

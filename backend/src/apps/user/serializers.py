@@ -13,4 +13,3 @@ class UserSerializer(serializers.ModelSerializer):
             "created_at",
             "USERNAME_FIELD"
         )
-        read_only_fields = ()  # PUSTE ?
