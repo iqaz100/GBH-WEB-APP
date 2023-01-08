@@ -25,7 +25,6 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-
     objects = UserManager()
     email = models.EmailField(max_length=50, unique=True)
     is_active = models.BooleanField(default=True)
