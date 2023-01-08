@@ -1,12 +1,8 @@
 from rest_framework import routers
 
-from apps.product.views import DiscountView
-from apps.product.views import CategoryView
-from apps.product.views import BrandView
-from apps.product.views import ProductView
+from apps.product.views import DiscountView, CategoryView, BrandView, ProductView
 from apps.cart.views import CartView
 from apps.order.views import OrderView
-
 from apps.client.views import ClientView, CompanyView
 from apps.person.views import PersonView
 from apps.address.views import AddressView
