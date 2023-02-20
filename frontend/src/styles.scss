@@ -1,4 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgb(158, 182, 143);
+}
+
+.categories-group-tab{
+//  border: solid red;
+  background-color: white;
+}
+
+.subcategories-area{
+ // border: solid aqua;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.subcategory-tab{
+  gap: 15px;
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+ // border: solid green;
+
+  & .category-menu-link{
+    font-size: large;
+    font-weight: bold;
+  }
+
+}
+
+.subsubcategory-tab{
+  & .category-menu-link{
+    font-size: small;
+    font-weight: normal;
+  }
+}
+
+.category-menu-link{
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+a:hover{
+  color: blue;
+}
+
+.mat-mdc-tab-labels{
+ //border: solid yellow;
+}
+
+.mat-mdc-tab-header{
+  // padding-left: 25%;
+  // padding-right: 25%;
+}
+
+.mat-mdc-tab{
+  font-size: large;
+}
+
+.mdc-tab-indicator__content { // inaczej "ink bar" - cienki pasek pod nazwa kategorii ktory przedstawia jakie pole jest zaznaczone
+  display: none;
+}
+
+.main-bar{
+  background-color: yellow;
+}
