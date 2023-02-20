@@ -1,0 +1,5 @@
+<div class="subcategories-area">
+    <div class="subcategory-tab" *ngFor="let subCategory of subCategories"><a class="category-menu-link"  href="test">{{subCategory.name}}</a>
+      <div class="subsubcategory-tab" *ngFor="let subSubCategory of subCategory.subSubCategories"><a class="category-menu-link" href="test">{{subSubCategory.name}}</a></div>
+    </div>
+</div>
