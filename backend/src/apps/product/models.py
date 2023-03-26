@@ -15,6 +15,7 @@ class Discount(models.Model):
 
 
 class Category(models.Model):
+    objects = models.Manager()
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100, null=False)
     description = models.CharField(max_length=1000, null=True)
@@ -35,6 +36,7 @@ class Brand(models.Model):
 
 
 class Product(models.Model):
+    objects = models.Manager()
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100, null=False)
     description = models.CharField(max_length=1000, null=True)
