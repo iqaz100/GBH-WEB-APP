@@ -1,0 +1,12 @@
+
+<mat-tab-group animationDuration="250ms" class="categories-group-tab">
+
+  <mat-tab *ngFor="let category of categories" label={{category.name}}>
+
+    <app-menu-subcategory [subCategories]="category.subCategories">
+
+    </app-menu-subcategory>
+
+  </mat-tab>
+
+</mat-tab-group>
