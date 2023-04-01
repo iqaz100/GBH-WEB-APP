@@ -28,7 +28,11 @@ export class ApiService {
   URL_PATH = '/api';
 
   products = {
-    create: (product: Partial<Product>) => this.post<any>(`/products/`, product)
+    create: (product: Partial<Product>) => this.post<any>(`/products/`, product),
+    update: (product: Partial<Product>) => this.patch<any>(`/products/${product.id}`, product),
+    list: (filters: {[key: string]: string }, limit: number, offset: number) =>
+      this.get<Product>(`/products/`, {...filters, limit, offset}),
+    get: (id: string) => this.get<Product>(`/products/${id}`)
   }
 
   constructor(public http: HttpClient){}
