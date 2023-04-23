@@ -25,13 +25,13 @@ export class HttpQueryEncoderCodec implements HttpParameterCodec {
 
 @Injectable()
 export class ApiService {
-  URL_PATH = '/api';
+  URL_PATH = 'http://localhost:8000/api';
 
   products = {
     create: (product: Partial<Product>) => this.post<any>(`/products/`, product),
     update: (product: Partial<Product>) => this.patch<any>(`/products/${product.id}`, product),
-    list: (filters: {[key: string]: string }, limit: number, offset: number) =>
-      this.get<Product>(`/products/`, {...filters, limit, offset}),
+    list: (filters?: {[key: string]: string }, limit?: number, offset?: number) =>
+      this.get<Product[]>(`/products/`, {...filters, limit, offset}),
     get: (id: string) => this.get<Product>(`/products/${id}`)
   }
 
